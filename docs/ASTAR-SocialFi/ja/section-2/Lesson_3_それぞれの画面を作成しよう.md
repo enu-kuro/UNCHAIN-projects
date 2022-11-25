@@ -210,7 +210,7 @@ export default function home() {
     if (isCreatedProfile) return;
     createProfile({ api: api, actingAccount: actingAccount! });
     setIsCreatedFnRun(true);
-  });
+  }, []);
 
   return (
     <div className="flex justify-center items-center bg-gray-200 w-screen h-screen relative">
@@ -344,7 +344,7 @@ export default function profile(props: any) {
     if (isCreatedProfile) return;
     createProfile({ api: api, actingAccount: actingAccount! });
     setIsCreatedFnRun(true);
-  });
+  }, []);
 
   return (
     <div className="flex justify-center items-center bg-gray-200 w-screen h-screen relative">
@@ -492,7 +492,7 @@ export default function message() {
     // create profile
     createProfile({ api: api, actingAccount: actingAccount! });
     setIsCreatedFnRun(true);
-  });
+  }, []);
 
   // create message member list UI
   const createMessageMemberList = async () => {
